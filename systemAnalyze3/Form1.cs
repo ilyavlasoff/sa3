@@ -35,34 +35,34 @@ namespace systemAnalyze3
         private void okButton_Click_1(object sender, EventArgs e)
         {
             List<List<int>> inputValues = new List<List<int>>();
-            for (int i = 0; i != count; ++i)
-            {
-                DataGridViewRow curRow = relationsMatrixView.Rows[i];
-                List<int> curList = new List<int>();
-                for (int j = 0; j != count; ++j)
-                {
-                    int val = 0;
-                    if (!Int32.TryParse(curRow.Cells[j].Value.ToString(), out val))
-                    {
-                        MessageBox.Show("неверные значения");
-                        return;
-                    }
-                    if (val == 1)
-                        curList.Add(j);
-                }
-                inputValues.Add(curList);
-            }
-            //inputValues.Add(new List<int> { 1, 6 });
-            //inputValues.Add(new List<int> { 2, 3 });
-            //inputValues.Add(new List<int> { });
-            //inputValues.Add(new List<int> { });
-            //inputValues.Add(new List<int> { 3 });
-            //inputValues.Add(new List<int> { 2, 3 });
-            //inputValues.Add(new List<int> { 1 });
-            //inputValues.Add(new List<int> { 5, 6 });
-            //inputValues.Add(new List<int> { 1 });
-            //inputValues.Add(new List<int> { 4, 6, 7, 8 });
-            //count = 10;
+            //for (int i = 0; i != count; ++i)
+            //{
+            //    DataGridViewRow curRow = relationsMatrixView.Rows[i];
+            //    List<int> curList = new List<int>();
+            //    for (int j = 0; j != count; ++j)
+            //    {
+            //        int val = 0;
+            //        if (!Int32.TryParse(curRow.Cells[j].Value.ToString(), out val))
+            //        {
+            //            MessageBox.Show("неверные значения");
+            //            return;
+            //        }
+            //        if (val == 1)
+            //            curList.Add(j);
+            //    }
+            //    inputValues.Add(curList);
+            //}
+            inputValues.Add(new List<int> { 1, 6 });
+            inputValues.Add(new List<int> { 2, 3 });
+            inputValues.Add(new List<int> { });
+            inputValues.Add(new List<int> { });
+            inputValues.Add(new List<int> { 3 });
+            inputValues.Add(new List<int> { 2, 3 });
+            inputValues.Add(new List<int> { 1 });
+            inputValues.Add(new List<int> { 5, 6 });
+            inputValues.Add(new List<int> { 1 });
+            inputValues.Add(new List<int> { 4, 6, 7, 8 });
+            count = 10;
             oper = new GraphOperator(inputValues, count);
             levels = oper.createDecompositionLists();
             levelUpDown.ReadOnly = false;
