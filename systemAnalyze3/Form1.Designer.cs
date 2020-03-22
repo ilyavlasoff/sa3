@@ -67,6 +67,7 @@
             this.topsCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.topsCount.Location = new System.Drawing.Point(491, 496);
             this.topsCount.Name = "topsCount";
+            this.topsCount.ReadOnly = true;
             this.topsCount.Size = new System.Drawing.Size(43, 20);
             this.topsCount.TabIndex = 13;
             this.topsCount.ValueChanged += new System.EventHandler(this.topsCount_ValueChanged);
